@@ -4,6 +4,7 @@ body {
     background-color: #fbf5f4;
     width: 100%;
     max-width: 1920px;
+    min-width: 770px;
     height: 100vh;
     padding: 0;
     margin: 0;
@@ -15,17 +16,18 @@ body {
 .header {
     margin: 0;
     padding: 0;
-    flex: 0 0 15vh;
+    flex: 0 0 10vh;
+    align-items: flex-end;
 }  
 .main {
     margin: 0;
     padding: 0;
-    flex: 1 1 70vh;
+    flex: 1 1 75vh;
 }  
 .footer {
     margin: 0;
     padding: 0;
-    flex: 0 0 15vh;
+    flex: 0 0 10vh;
 }  
 
 .header-container {
@@ -136,11 +138,12 @@ body {
     align-items: stretch;
     margin: 0 50px;
     padding: 0;
+    height: 100%;
 }
 .main__logo {
-    flex-basis: 50px;
+    flex-basis: 5%;
     flex-grow: 0;
-    flex-shrink: 0;
+    flex-shrink: 1;
     align-self: center;
 }
 
@@ -161,58 +164,61 @@ body {
 }
 
 .main__img {
-    flex-basis: 22%;
+    flex-basis: 25%;
     flex-grow: 0;
-    flex-shrink: 1;
+    flex-shrink: 0;
     text-align: center;
     min-width: 22%;
-    margin-right: 80px;
-    margin-left: 80px;
+    margin-right: 50px;
+    margin-left: 50px;
     box-sizing: padding-box;
+    align-self: center;
     }
 
 .main__img img {
     width: 100%;
     height: auto;
-    
 }
 
 .main__content {
     align-self: center;
     flex-grow: 1;
     flex-shrink: 1;
+    flex-basis: 55%;
     overflow: hidden;
     padding: 20px 0;
 }
 .main__count {
-    flex-basis: 70px;
+    flex-basis: 8%;
     flex-grow: 0;
-    flex-shrink: 0;
+    flex-shrink: 1;
     margin-left: 20px;
 }
 
 .main__title {
     position: relative;
-    padding-left: 10px;
+    padding-left: 5px;
 }
 
 .main__title span {
     font-size: 8.1em;
     line-height: 1;
     margin: 0;
-    padding: 0;
+    padding: 0 50px 0 0;
     font-weight: 700;
     color: #fa6f95;
     text-align: center;
+    position: relative;
+    
 }
-.main__title::before {
+.main__title span::before {
     content: "Центр йоги";
     display: block;
     transform: rotate(-90deg);
-    top: 62px;
-    left: -45px;
+    bottom: 4.5em;
+    left: -3.1em;
     position: absolute;
-    font-size: 1em;
+    font-size: 0.12em;
     font-weight: 100;
     color: #fa6f95;
 }
@@ -229,13 +235,14 @@ body {
     font-size: 1em;
     font-weight: 100;
     line-height: 1.5;
+    align-self: center;
 }
 
 .main__invitation .btn-invitation {
-    width: 60px;
-    height: 60px;
+    width: 4.5em;
+    height: 4.5em;
     border-radius: 50%;
-    margin-right: 25px;
+    margin-right: 1.5em;
     position: relative;
     background-image: linear-gradient(to bottom, #fa6f95, #f78f6e);
 }
@@ -251,11 +258,11 @@ body {
     content: "+";
     display: block;
     position: absolute;
-    font-size: 44px;
+    font-size: 3.5em;
     color: #fff;
     font-weight: 100;
-    left: 18px;
-    top: 3px;
+    left: 0.38em;
+    top: 0.04em;
 }
 
 .main__count {
@@ -274,7 +281,7 @@ body {
     content: "-09";
     display: block;
     position: absolute;
-    font-size: 34px;
+    font-size: 2rem;
     color: #f78f6e;
     font-weight: 100;
     left: 10px;
@@ -282,13 +289,11 @@ body {
 }
 
 .footer-container {
-    margin: 0 50px 50px 0px;
+    margin: 0 50px 0 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
-    height: 40px;
-    height: 10%;
+    height: 100%;
 }
 
 .footer__count {
@@ -329,14 +334,14 @@ body {
     padding: 0;
     margin: 0;
     font-weight: 600;
-    align-self: center;
 }
 .btn-link {
     width: 36px;
     height: 36px;
     border-radius: 50%;
     position: relative;
-    margin-left: 25px;
+    margin: 0 0 0 25px;
+    padding: 0;
     background-image: linear-gradient(to bottom, #fa6f95, #f78f6e);
 }
 
@@ -350,4 +355,30 @@ body {
     border-bottom: none;
     bottom: 13px;
     right: 11px;
+}
+@media screen and (max-width: 1050px) {
+    .main__title span {
+        font-size: 7em;
+    }
+    body {
+        font-size: 16px;
+    }
+    .main__count span::before {
+        font-size: 2rem;
+        left: 0.3em;
+        top: 2.2em;
+    }
+}
+@media screen and (max-width: 900px) {
+    .main__title span {
+        font-size: 6em;
+    }
+    body {
+        font-size: 13px;
+    }
+    .main__count span::before {
+        font-size: 1.8rem;
+        left: 0;
+        top: 1.9em;
+    }
 }
