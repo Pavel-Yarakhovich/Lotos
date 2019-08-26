@@ -1,0 +1,353 @@
+body {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fbf5f4;
+    width: 100%;
+    max-width: 1920px;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+   }
+
+.header {
+    margin: 0;
+    padding: 0;
+    flex: 0 0 15vh;
+}  
+.main {
+    margin: 0;
+    padding: 0;
+    flex: 1 1 70vh;
+}  
+.footer {
+    margin: 0;
+    padding: 0;
+    flex: 0 0 15vh;
+}  
+
+.header-container {
+    margin: 30px 50px 0 50px;
+    padding: 0;
+    height: 40px;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10%;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 0 30px 0 0;
+    flex-basis: 30%;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.header__menu p {
+    margin: 0 0 0 15px;
+}
+
+.header__burger {
+    display: inline-block;
+    width: 25px;
+    height: 16px;
+    padding-left: 4px;
+    padding-top: 4px;
+}
+.burger__line {
+    width: 20px;
+    height: 2px;
+    background-color: #f78e6a;
+    display: block;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.burger__line::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -4px;
+    width: 2px;
+    height: 2px;
+    background-color: #000;
+}
+
+.burger__line:last-child {
+    margin-bottom: 0;
+    width: 14px;
+}
+
+.header__logo {
+    display: none;
+}
+
+.header__contacts {
+    flex-basis: 190px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-left: 30px;
+    text-align: right;
+}
+
+.header__page-description {
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    justify-content: center;
+    position: relative;
+}
+
+.header__page-description::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: -13px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #f78e6a;
+}
+
+.header__contacts,
+.header__menu,
+.header__page-description {
+    font-weight: 600;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 0 50px;
+    padding: 0;
+}
+.main__logo {
+    flex-basis: 50px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.main__logo img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    transition: all .3s ease-in-out;
+}
+.main__logo img:hover {
+    transform: scale(1.2);
+    animation: ding  .5s infinite .2s;
+}
+
+@keyframes ding {
+    0%, 100% {transform: rotate(-10deg);}
+    50% {transform: rotate(11deg)}
+}
+
+.main__img {
+    flex-basis: 22%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    text-align: center;
+    min-width: 22%;
+    margin-right: 80px;
+    margin-left: 80px;
+    box-sizing: padding-box;
+    }
+
+.main__img img {
+    width: 100%;
+    height: auto;
+    
+}
+
+.main__content {
+    align-self: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: hidden;
+    padding: 20px 0;
+}
+.main__count {
+    flex-basis: 70px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+.main__title {
+    position: relative;
+    padding-left: 10px;
+}
+
+.main__title span {
+    font-size: 8.1em;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    color: #fa6f95;
+    text-align: center;
+}
+.main__title::before {
+    content: "Центр йоги";
+    display: block;
+    transform: rotate(-90deg);
+    top: 62px;
+    left: -45px;
+    position: absolute;
+    font-size: 1em;
+    font-weight: 100;
+    color: #fa6f95;
+}
+
+.main__invitation {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin: 20px 0 0 0;
+    
+}
+
+.main__invitation span {
+    font-size: 1em;
+    font-weight: 100;
+    line-height: 1.5;
+}
+
+.main__invitation .btn-invitation {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 25px;
+    position: relative;
+    background-image: linear-gradient(to bottom, #fa6f95, #f78f6e);
+}
+.btn {
+    margin: 5px;
+}
+.btn:hover {
+    background-image: linear-gradient(to top, #fa6f95, #f78f6e);
+    box-shadow: 0 0 5px 0 #7e384b;
+}
+
+.btn-invitation::after {
+    content: "+";
+    display: block;
+    position: absolute;
+    font-size: 44px;
+    color: #fff;
+    font-weight: 100;
+    left: 18px;
+    top: 3px;
+}
+
+.main__count {
+    align-self: center;
+}
+.main__count span{
+    font-size: 4em;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    color: #fa6f95;
+    position: relative;
+    text-align: right;
+}
+.main__count span::before {
+    content: "-09";
+    display: block;
+    position: absolute;
+    font-size: 34px;
+    color: #f78f6e;
+    font-weight: 100;
+    left: 10px;
+    top: 95px;
+}
+
+.footer-container {
+    margin: 0 50px 50px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 40px;
+    height: 10%;
+}
+
+.footer__count {
+    display: none;
+}
+
+.footer__social {
+    flex-basis: 150px;
+    flex-grow: 1;
+}
+.footer__social a {
+    display: inline;
+    text-decoration: none;
+    color: #000;
+    padding: 0;
+    margin: 0 30px 0 0;
+    font-weight: 600;
+    transition: all .2s ease;
+}
+
+.footer__social a:hover {
+    color: #fa6f95;
+} 
+.footer__social a:active {
+    color: #f78f6e;
+} 
+
+.footer__link {
+   flex-basis: auto;
+   flex-grow: 1;
+   display: flex;
+   flex-direction: row-reverse;
+   justify-content: start;
+}
+.footer__link span {
+    text-decoration: none;
+    color: #000;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    align-self: center;
+}
+.btn-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    position: relative;
+    margin-left: 25px;
+    background-image: linear-gradient(to bottom, #fa6f95, #f78f6e);
+}
+
+.btn-link::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 7px solid #fff;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom: none;
+    bottom: 13px;
+    right: 11px;
+}
