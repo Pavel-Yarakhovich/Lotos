@@ -13,7 +13,7 @@
 
 <body>
     <div class="header">
-        <div class="container header-container clearfix">
+        <div class="container container_header">
             <div class="header__menu">
                 <div class="header__burger">
                     <span class="burger__line line-1"></span>
@@ -22,20 +22,23 @@
                 </div>
                 <p>Меню</p>
             </div>
-            <div class="header__logo">
-                <a href="#" target="_self" title="На главную страницу">
-                    <img alt="Логотип компании" src="img/lotos-img.png" width="49" height="31">
-                </a>
-            </div>
-            <div class="header__page-description">
+            
+            <a class="header__logo" href="#" target="_self" title="На главную страницу">
+                <img alt="Логотип компании" src="img/lotos-img.png" width="49" height="31">
+            </a>
+            
+            <p class="header__page-description">
                 Добро пожаловать
-            </div>
-            <div class="header__contacts">+7 (812) 345-56-97</div>
+            </p>
+
+            <a class="header__contacts" href="tel:+78123455697">
+                +7 (812) 345-56-97
+            </a>
         </div>
     </div>
 
     <div class="main">
-        <div class="container main-container clearfix">
+        <div class="container container_main">
             <div class="main__logo">
                 <a href="#" target="_self" title="На главную страницу">
                     <img alt="Логотип компании" src="img/lotos-img.png" width="49" height="31">
@@ -47,12 +50,10 @@
             <div class="main__content">
                 <div class="main__title">
                     <span>Lotos</span>
-                    <div class="btn btn-link"></div>
+                    <a class="btn main__btn--link" href="#" target="_self"></a>
                 </div>
                 <div class="main__invitation">
-                    <a href="#" target="_self" title="Записаться на занятие">
-                        <div class="btn btn-invitation"></div>
-                    </a>
+                    <a  class="btn btn-invitation" href="#" target="_self" title="Записаться на занятие"></a>
                     <span>Приглашаем вас и ваших друзей на бесплатное пробное занятие</span>
                 </div>
             </div>
@@ -63,7 +64,7 @@
     </div>
 
     <div class="footer">
-        <div class="container footer-container">
+        <div class="container container_footer">
             <div class="footer__count">
                 <span>01</span>
             </div>
@@ -73,9 +74,7 @@
                 <a href="#" title="Instagram" target="_blank">INST</a>
             </div>
             <div class="footer__link">
-                <a href="index-desctop-2.html" title="Направления и классы" target="_self">
-                    <div class="btn btn-link"></div>
-                </a>
+                <a class="btn footer__btn--link" href="index-desctop-2.html" title="Направления и классы" target="_self"></a>
                 <span>Направления и классы</span>
 
             </div>
