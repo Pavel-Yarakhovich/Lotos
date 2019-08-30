@@ -323,6 +323,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     height: 100%;
+    align-items: center;
 }
 
 .footer__count {
@@ -420,7 +421,6 @@ body {
 @media screen and (max-width: 768px) {
     body {
         font-size: 14px;
-        max-width: 768px;
         width: 100%;
         overflow: hidden;
     }
@@ -454,15 +454,17 @@ body {
         position: relative;
         left: 80px;
     }
+    .main__title {
+        padding-left: 15px;
+    }
     .main__title span {
         font-size: 9em;
     }
     .main__title .main__btn--link {
         display: block;
         position: absolute;
-        top: 4.05em;
-        left: 7.13em;
-        transform: scale(0.7);
+        top: 3.7em;
+        left: 6.75em;
     }
 
     .main__invitation span {
